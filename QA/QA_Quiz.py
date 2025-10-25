@@ -8,10 +8,6 @@ with open('QA/questions.json', 'r') as file:
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-letters = ['A', 'B', 'C','D']
-options = {}
-
-
 def get_all_questions(data):
     all_questions = []
     for category in data["categories"]:
@@ -47,6 +43,23 @@ def select_category(data):
             return chosen_category
         else:
             print("Invalid selection, please try again")
+
+
+def ask_question(question_dict):
+    clear_screen
+    question = question_dict["question"]
+    print(f'{question}')
+    answers = []
+    answers.extend(question_dict['decoys'])
+    answers.append(question_dict['correct'])
+    random.shuffle(answers)
+    answer_mapping = {}
+    for i, answer in enumerate(answers):
+        letter = chr(65 + i)
+        print(f'[{letter}] {answer}')
+        answer_mapping[letter] = answer  # This adds the key-value pair
+
+
 
 def exit():
     return False #Placeholder 
