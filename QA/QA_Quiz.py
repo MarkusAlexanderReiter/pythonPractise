@@ -4,10 +4,12 @@ import random
 
 #so I dont have to type it out all the time... 
 def invalid_input(): 
-    print('Invalid input! Please try again.\n')
+    print('Invalid input! Please try again.')
 
-with open('QA/questions.json', 'r') as file:
-    data = json.load(file)
+def load_json():
+    with open('QA/questions.json', 'r') as file:
+        data = json.load(file)
+        return data
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -20,11 +22,11 @@ def get_all_questions(data):
 
 #Enumerate gives an index-number (0,1,2..) and the value (eg. 'Rice')
 
-def menu_choice(): #returns the questions
+def menu_choice(data): #returns the questions
     while True:
         select = input('[1] Play random\n[2] Select category\n> ')
         if select == '1':
-            questions = get_all_questions()
+            questions = get_all_questions(data)
             return questions
         elif select == '2':
             chosen_category = select_category(data)
@@ -90,10 +92,10 @@ def run_quiz(question_dicts):
     clear_screen
     print(f'Thank you for playing!\nYou got {score} out of {len(question_dicts)} correct!')
 
-def exit():
-    return False #Placeholder 
-
-while exit() is False:
+if __name__ == "__main__":
+    data = load_json()
     print('## Welcome to Q&A ##\n')
     print()
-    menu_choice
+    questions = menu_choice(data)
+    run_quiz(questions)
+
