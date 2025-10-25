@@ -27,12 +27,25 @@ def menu_choice():
             print('1')
             return select
         elif select == '2':
-            select_category
-            break
+            chosen_category = select_category(data)
+            return chosen_category
         else:
             print('Invalid input! Please try again.\n')
 
-def select_category()
+def select_category(data):
+    clear_screen
+    categories = data["categories"]
+
+    for i, category in enumerate(data["categories"], start=1):
+        print(f"{i}. {category}")
+
+    selection = input("Select a category: \n")
+    while True:
+        if selection.isdigit() and 1 <= int(selection) <= len(categories):
+            chosen_category = categories[int(selection)-1] #-1 to get the index which starts at 0
+            return chosen_category
+        else:
+            print("Invalid selection, please try again")
 
 def exit():
     return False #Placeholder 
