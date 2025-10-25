@@ -34,15 +34,15 @@ def menu_choice():
 
 def select_category(data):
     clear_screen
-    categories = data["categories"]
+    category_names = list(data["categories"].keys())
 
     for i, category in enumerate(data["categories"], start=1):
         print(f"{i}. {category}")
 
     selection = input("Select a category: \n")
     while True:
-        if selection.isdigit() and 1 <= int(selection) <= len(categories):
-            chosen_category = categories[int(selection)-1] #-1 to get the index which starts at 0
+        if selection.isdigit() and 1 <= int(selection) <= len(category_names):
+            chosen_category = category_names[int(selection)-1] #-1 to get the index which starts at 0
             return chosen_category
         else:
             print("Invalid selection, please try again")
