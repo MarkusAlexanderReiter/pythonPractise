@@ -20,15 +20,16 @@ def get_all_questions(data):
 
 #Enumerate gives an index-number (0,1,2..) and the value (eg. 'Rice')
 
-def menu_choice():
+def menu_choice(): #returns the questions
     while True:
         select = input('[1] Play random\n[2] Select category\n> ')
         if select == '1':
-            print('1')
-            return select
+            questions = get_all_questions()
+            return questions
         elif select == '2':
             chosen_category = select_category(data)
-            return chosen_category
+            questions = data["categories"][chosen_category]
+            return questions
         else:
             print('Invalid input! Please try again.\n')
 
