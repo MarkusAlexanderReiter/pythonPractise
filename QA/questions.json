@@ -1,0 +1,158 @@
+{
+  "categories": {
+    "Food": [
+      {
+        "question": "What ingredient makes bread rise?",
+        "correct": "Yeast",
+        "decoys": ["Flour", "Salt", "Sugar"]
+      },
+      {
+        "question": "Which fruit is traditionally used to make guacamole?",
+        "correct": "Avocado",
+        "decoys": ["Mango", "Tomato", "Banana"]
+      },
+      {
+        "question": "What is sushi traditionally wrapped in?",
+        "correct": "Seaweed",
+        "decoys": ["Rice paper", "Lettuce", "Pasta"]
+      },
+      {
+        "question": "What spice gives curry its yellow color?",
+        "correct": "Turmeric",
+        "decoys": ["Cumin", "Saffron", "Coriander"]
+      }
+    ],
+    "Tech": [
+      {
+        "question": "What does CPU stand for?",
+        "correct": "Central Processing Unit",
+        "decoys": ["Computer Power Unit", "Central Power Unit", "Core Processing Unit"]
+      },
+      {
+        "question": "What does 'HTML' stand for?",
+        "correct": "HyperText Markup Language",
+        "decoys": ["Hyperlink and Text Marking Language", "Hyper Tool Markup Language", "Home Tool Markup Language"]
+      },
+      {
+        "question": "Which company created the iPhone?",
+        "correct": "Apple",
+        "decoys": ["Samsung", "Google", "Nokia"]
+      },
+      {
+        "question": "What does 'GPU' stand for?",
+        "correct": "Graphics Processing Unit",
+        "decoys": ["General Processing Unit", "Gaming Power Unit", "Graphical Program Utility"]
+      }
+    ],
+    "Science": [
+      {
+        "question": "What planet is known as the Red Planet?",
+        "correct": "Mars",
+        "decoys": ["Venus", "Jupiter", "Mercury"]
+      },
+      {
+        "question": "What is the chemical symbol for water?",
+        "correct": "H2O",
+        "decoys": ["O2", "CO2", "H2"]
+      },
+      {
+        "question": "What gas do plants absorb during photosynthesis?",
+        "correct": "Carbon Dioxide",
+        "decoys": ["Oxygen", "Nitrogen", "Hydrogen"]
+      },
+      {
+        "question": "What force keeps us on the ground?",
+        "correct": "Gravity",
+        "decoys": ["Magnetism", "Inertia", "Friction"]
+      }
+    ],
+    "Geography": [
+      {
+        "question": "What is the largest ocean on Earth?",
+        "correct": "Pacific Ocean",
+        "decoys": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"]
+      },
+      {
+        "question": "Which country has the Great Wall?",
+        "correct": "China",
+        "decoys": ["India", "Japan", "Korea"]
+      },
+      {
+        "question": "What is the capital of France?",
+        "correct": "Paris",
+        "decoys": ["Rome", "Berlin", "Madrid"]
+      },
+      {
+        "question": "Mount Everest is located in which mountain range?",
+        "correct": "Himalayas",
+        "decoys": ["Andes", "Alps", "Rockies"]
+      }
+    ],
+    "History": [
+      {
+        "question": "Who was the first President of the United States?",
+        "correct": "George Washington",
+        "decoys": ["Thomas Jefferson", "Abraham Lincoln", "John Adams"]
+      },
+      {
+        "question": "In which year did World War II end?",
+        "correct": "1945",
+        "decoys": ["1939", "1942", "1950"]
+      },
+      {
+        "question": "Who discovered America in 1492?",
+        "correct": "Christopher Columbus",
+        "decoys": ["Marco Polo", "Vasco da Gama", "Ferdinand Magellan"]
+      },
+      {
+        "question": "The pyramids of Giza were built in which country?",
+        "correct": "Egypt",
+        "decoys": ["Mexico", "Iraq", "Greece"]
+      }
+    ],
+    "Movies": [
+      {
+        "question": "Which movie features a character named Darth Vader?",
+        "correct": "Star Wars",
+        "decoys": ["Star Trek", "Guardians of the Galaxy", "The Matrix"]
+      },
+      {
+        "question": "Who directed the movie 'Inception'?",
+        "correct": "Christopher Nolan",
+        "decoys": ["Steven Spielberg", "James Cameron", "Quentin Tarantino"]
+      },
+      {
+        "question": "What is the name of the wizarding school in Harry Potter?",
+        "correct": "Hogwarts",
+        "decoys": ["Durmstrang", "Beauxbatons", "Ilvermorny"]
+      },
+      {
+        "question": "In which movie does Tom Hanks say 'Life is like a box of chocolates'?",
+        "correct": "Forrest Gump",
+        "decoys": ["Cast Away", "The Green Mile", "Big"]
+      }
+    ],
+    "Gaming": [
+      {
+        "question": "What is the main character’s name in The Legend of Zelda?",
+        "correct": "Link",
+        "decoys": ["Zelda", "Ganondorf", "Epona"]
+      },
+      {
+        "question": "Which company created the PlayStation?",
+        "correct": "Sony",
+        "decoys": ["Microsoft", "Nintendo", "Sega"]
+      },
+      {
+        "question": "In Minecraft, which material is needed to craft a Nether Portal?",
+        "correct": "Obsidian",
+        "decoys": ["Bedrock", "Diamond", "Stone"]
+      },
+      {
+        "question": "What is the best-selling video game of all time?",
+        "correct": "Minecraft",
+        "decoys": ["Tetris", "GTA V", "Wii Sports"]
+      }
+    ]
+  }
+}
