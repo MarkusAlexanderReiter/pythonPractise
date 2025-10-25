@@ -1,6 +1,7 @@
 import os
 import json 
 import random
+
 #so I dont have to type it out all the time... 
 def invalid_input(): 
     print('Invalid input! Please try again.\n')
@@ -79,7 +80,15 @@ def ask_question(question_dict):
     else:
         print(f'False. [{question_dict["correct"]}] would have been the right answer!')
         return False
-    
+
+def run_quiz(question_dicts):
+    score = 0
+    for q in question_dicts:
+        answer = ask_question(q)
+        if answer == True:
+            score += 1
+    clear_screen
+    print(f'Thank you for playing!\nYou got {score} out of {len(question_dicts)} correct!')
 
 def exit():
     return False #Placeholder 
