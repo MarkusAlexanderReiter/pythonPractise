@@ -1,6 +1,9 @@
 import os
 import json 
 import random
+#so I dont have to type it out all the time... 
+def invalid_input(): 
+    print('Invalid input! Please try again.\n')
 
 with open('QA/questions.json', 'r') as file:
     data = json.load(file)
@@ -27,7 +30,7 @@ def menu_choice(): #returns the questions
             questions = data["categories"][chosen_category]
             return questions
         else:
-            print('Invalid input! Please try again.\n')
+            invalid_input()
 
 def select_category(data):
     clear_screen
@@ -42,7 +45,7 @@ def select_category(data):
             chosen_category = category_names[int(selection)-1] #-1 to get the index which starts at 0
             return chosen_category
         else:
-            print("Invalid selection, please try again")
+            invalid_input()
 
 
 def ask_question(question_dict):
@@ -52,6 +55,8 @@ def ask_question(question_dict):
     answers = []
     answers.extend(question_dict['decoys'])
     answers.append(question_dict['correct'])
+    
+    #shuffles answers and adds them to dict
     random.shuffle(answers)
     answer_mapping = {}
     for i, answer in enumerate(answers):
@@ -59,7 +64,22 @@ def ask_question(question_dict):
         print(f'[{letter}] {answer}')
         answer_mapping[letter] = answer  # This adds the key-value pair
 
-
+    #compare inoput
+    while True:
+        selection = input("Answer:\n> ").upper()
+        if selection in answer_mapping:
+            break
+        else:
+            invalid_input()
+    
+    #check if correct
+    if answer_mapping[selection] == question_dict['correct']:
+        print(f'Correct! {selection} was the right answer')
+        return True
+    else:
+        print(f'False. [{question_dict["correct"]}] would have been the right answer!')
+        return False
+    
 
 def exit():
     return False #Placeholder 
